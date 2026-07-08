@@ -71,7 +71,7 @@
     if (!faqButtons.length) return;
 
     faqButtons.forEach((button) => {
-      const answer = button.parentElemnt.nextElementSibling;
+      const answer = button.parentElement.nextElementSibling;
       if (!answer) return;
 
       button.setAttribute('aria-expanded', 'false');
