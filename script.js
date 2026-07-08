@@ -71,7 +71,7 @@
     if (!faqButtons.length) return;
 
     faqButtons.forEach((button) => {
-      const answer = button.nextElementSibling;
+      const answer = button.parentElemnt.nextElementSibling;
       if (!answer) return;
 
       button.setAttribute('aria-expanded', 'false');
@@ -80,7 +80,7 @@
         const isOpen = Boolean(answer.style.maxHeight);
 
         faqButtons.forEach((otherButton) => {
-          const otherAnswer = otherButton.nextElementSibling;
+          const otherAnswer = otherButton.parentElement.nextElementSibling;
           if (otherAnswer && otherAnswer !== answer) {
             otherAnswer.style.maxHeight = null;
             otherButton.setAttribute('aria-expanded', 'false');
